@@ -1,0 +1,12 @@
+{
+  "name": "news-homepage",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel --open",
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "parcel": "^2.9.3",
+    "sass": "^1.63.6"
+  }
+}
