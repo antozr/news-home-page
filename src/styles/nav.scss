@@ -1,50 +1,90 @@
+.head {
+  width: 100vw;
+  height: 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 4vw 0;
+  margin: 28px 0;
 
+  &__logo {
+    height: 100%;
+    aspect-ratio: 2 / 1;
 
-.head{
-    width: 100vw;
-    height: 28px;
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__btn {
+    width: 40px;
+    height: 100%;
+    border: none;
+    background-color: transparent;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 0 4vw 0;
-    margin:  28px 0;
-    
+    padding: 6px 0;
 
-    &__logo{
-        height: 100%;
-        aspect-ratio: 2 / 1;
+    &--open{
+      padding: 0;
+      position: fixed;
+      z-index: 5;
+      right: 5vw;
+      top: 28px;
 
-        &>img{
-            width: 100%;
-            height: 100%;
-        }
+      &:nth-child(1){
+        transition: 0.3s;
+        transform: rotate(-45deg);
+      }
+      &:nth-child(2){
+        transition: 0.2s;
+        transform: scale(0) translateX(-30px);
+
+      }
     }
+  }
+  &__btnBarre {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-dark);
+  }
 
-    &__btn{
-        width: 40px;
-        height: 100%;
-        border: none;
-        background-color: transparent;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 6px 0;
-    }
-    &__btnBarre{
-        width: 100%;
-        height: 3px;
-        background-color: var(--color-dark);
-
-    }
-
-    &__nav{
-        width: auto;
-    }
-    
-    
+  &__nav {
+    width: auto;
+  }
 }
 
-.nav{
+.nav {
+  display: none;
+  &--open {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #0000188f;
+    z-index: 5;
+    top: 0;
+    left: 0;
+  }
 
-    display: none;
+  &__list {
+    width: 65%;
+    height: 100%;
+    background-color: var(--color-white);
+    margin: 0 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 20vh 5vw 30vh;
+    row-gap: 12px;
+  }
+
+  &__link {
+    
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px 20px 8px 0;
+  }
 }
