@@ -1,0 +1,58 @@
+.sect {
+  padding: 0 4vw;
+  &--first {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 64px;
+  }
+
+  &__boxContent {
+    width: 100%;
+    height: auto;
+    //min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    row-gap: 28px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    object-fit: cover;
+  }
+  &__title {
+    font-family: "Inter";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 100%;
+    max-width: 10ch;
+    height: auto;
+  }
+  &__txt {
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 175%;
+  }
+  &__link {
+    display: inline-flex;
+    width: 185px;
+    height: 48px;
+    color: var(--color-white);
+    background-color: var(--color-red);
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4.34px;
+    text-transform: uppercase;
+  }
+}
