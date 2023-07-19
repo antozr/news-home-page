@@ -36,12 +36,7 @@
       z-index: 8;
       right: 5vw;
       top: 28px;
-      border: 2px solid red;
-      
-
-      
-
-     
+     // border: 2px solid red;
     }
   }
   &__btnBarre {
@@ -76,6 +71,13 @@
 
 .nav {
   display: none;
+  transition: 0.3s;
+  &--close{
+
+    &>ul{
+      animation: closeNavMobile 0.8s  both;
+    }
+  }
   &--open {
     
     display: flex;
@@ -86,6 +88,7 @@
     z-index: 5;
     top: 0;
     left: 0;
+    transition: 0.3s;
   }
 
   &__list {
@@ -163,7 +166,7 @@
 @keyframes openNavMobile{
   from{
     transform: translateX(80vw);
-   
+   background-color: var(--color-dark);
 
   }
   40%{
@@ -172,6 +175,24 @@
 
   to{ 
     transform: translateX(0vw);
+    background-color: var(--color-white);
+    
+  }
+}
+@keyframes closeNavMobile{
+  from{
+    transform: translateX(0vw);
+   
+
+  }
+  40%{
+    transform: translateX(30vw);
+    background-color: var(--color-dark);
+  }
+
+  to{ 
+    transform: translateX(80vw);
+    background-color: var(--color-dark);
     
   }
 }

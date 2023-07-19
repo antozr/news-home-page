@@ -13,11 +13,15 @@ btnNav.addEventListener('click', (e)=>{
     console.log(e);
     console.log(e.target);
     if(btnNav.classList.contains('head__btn--open')){
-        navBox.classList.remove('nav--open');
+        navBox.classList.add('nav--close');
+        setTimeout(()=>{
+            navBox.classList.remove('nav--open');
         btnNav.classList.remove('head__btn--open');
         allBar.forEach((el)=>{
             el.classList.remove('head__btnBarre--open')
         })
+        navBox.classList.remove('nav--close');
+        }, 800)
     }else{
         navBox.classList.add('nav--open');  
         btnNav.classList.add('head__btn--open');
