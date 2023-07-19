@@ -33,6 +33,19 @@
     line-height: 100%;
     max-width: 10ch;
     height: auto;
+
+    &--2 {
+      font-size: 32px;
+    }
+    &--3 {
+      font-size: 20px;
+      letter-spacing: 0.2px;
+      max-width: none;
+      margin: 0 0 14px 0;
+    }
+    &--jaune {
+      color: var(--color-orange);
+    }
   }
   &__txt {
     font-family: "Inter";
@@ -54,5 +67,46 @@
     font-weight: 700;
     letter-spacing: 4.34px;
     text-transform: uppercase;
+    cursor: pointer;
+    &:hover{
+        transition: 0.6s;
+        background-color: var(--color-dark);
+
+    }
+  }
+
+  &__boxNew {
+    background-color: var(--color-dark);
+    width: 100%;
+    min-height: 60vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 42px;
+    color: var(--color-white);
+    padding: 28px 22px;
+
+  }
+  &__listNew{
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__elNew{
+    padding: 35px 0;
+    cursor: pointer;
+    &>p{
+        color: var(--color-blueG);
+    }
+    &:hover{
+        &>h3{
+            transition: 0.2s;
+            color: var(--color-orange);
+        }
+    }
+    &:nth-child(2){
+        border-top: 1px solid var(--color-darkB);
+        border-bottom: 1px solid var(--color-darkB);
+    }
   }
 }
