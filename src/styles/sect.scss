@@ -110,6 +110,49 @@
         border-bottom: 1px solid var(--color-darkB);
     }
   }
+
+  &--second{
+    width: 100%;
+    margin: 64px 0 0 0;
+    padding: 0 4vw;
+    
+  }
+  &__listBot{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 50px;
+  }
+  &__elBot{
+    width: 100%;
+    height: auto;
+    min-height: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 24px;
+  }
+  &__elBox{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    padding: 6px 0;
+    border: 2px solid greenyellow;
+
+    &>h2{
+      color: var(--color-blueG);
+    }
+    &>h3{
+      margin: 0;
+    }
+  
+  }
+  &__imgBot{
+    height: 100%;
+    width: 100px;
+    object-fit: cover;
+  }
 }
 
 
